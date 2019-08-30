@@ -4,13 +4,15 @@
 EXEC = plot
 SDIR = source
 IDIR = include
-LDIR = -L~/dev-tools/libraries/plot/bin
+LDIR =
+# for example LDIR = -L~/dev-tools/libraries/plot/bin
 ODIR = obj
 BDIR = build
 
 #compile and link flags
 CXX    = g++
-CFLAGS = -I$(IDIR) -I~/dev-tools/libraries/plot/share/examples/c++ -I~/dev-tools/libraries/plot/include
+CFLAGS = -I$(IDIR)
+# for example CFLAGS = -I$(IDIR) -I~/dev-tools/libraries/plot/share/examples/c++ -I~/dev-tools/libraries/plot/include
 LIBS   = $(LDIR) -lplotcxx
 
 SRC = $(wildcard $(SDIR)/*.cpp)
