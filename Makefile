@@ -12,8 +12,9 @@ BDIR = build
 #compile and link flags
 CXX    = g++
 CFLAGS = -I$(IDIR)
+LIBS   = $(LDIR)
 # for example CFLAGS = -I$(IDIR) -I~/dev-tools/libraries/plot/share/examples/c++ -I~/dev-tools/libraries/plot/include
-LIBS   = $(LDIR) -lplotcxx
+# for example LIBS   = $(LDIR) -lplotcxx
 
 SRC = $(wildcard $(SDIR)/*.cpp)
 OBJ = $(patsubst $(SDIR)/%.cpp, $(ODIR)/%.o, $(SRC))
