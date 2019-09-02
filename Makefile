@@ -5,7 +5,7 @@ EXEC = plot
 SDIR = source
 IDIR = include
 LDIR =
-# for example LDIR = -L~/dev-tools/libraries/plot/bin
+# for example LDIR = -L~/dev-tools/libraries/plot/lib
 ODIR = obj
 BDIR = build
 
@@ -20,10 +20,10 @@ SRC = $(wildcard $(SDIR)/*.cpp)
 OBJ = $(patsubst $(SDIR)/%.cpp, $(ODIR)/%.o, $(SRC))
 
 $(BDIR)/plot: $(OBJ)
-	$(CXX) -o $(BDIR)/plot $(CFLAGS) $(LDFLAGS) $(LIBS) $(OBJ) 
+	$(CXX) -o $(BDIR)/plot $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBS) 
 
 $(ODIR)/%.o: $(SDIR)/%.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm $(ODIR)/* $(BDIR)/$(EXEC)
+	rm $(ODIR)/* $(BDIR)/*
