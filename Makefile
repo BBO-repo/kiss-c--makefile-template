@@ -19,8 +19,8 @@ LIBS   = $(LDIR)
 SRC = $(wildcard $(SDIR)/*.cpp)
 OBJ = $(patsubst $(SDIR)/%.cpp, $(ODIR)/%.o, $(SRC))
 
-$(BDIR)/plot: $(OBJ)
-	$(CXX) -o $(BDIR)/plot $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBS) 
+$(BDIR)/$(EXEC): $(OBJ)
+	$(CXX) -o $(BDIR)/$(EXEC) $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBS) 
 
 $(ODIR)/%.o: $(SDIR)/%.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@
