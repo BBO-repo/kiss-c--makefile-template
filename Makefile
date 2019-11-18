@@ -6,7 +6,7 @@
 # executable and main directories #
 ###################################
 
-EXEC := map-optim
+EXEC := my-exe
 SDIR := src
 IDIR := include
 ODIR := obj
