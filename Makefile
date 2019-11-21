@@ -7,7 +7,7 @@
 ###################################
 
 EXEC := my-exe
-SDIR := src
+SDIR := source
 IDIR := include
 ODIR := obj
 BDIR := build
